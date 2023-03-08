@@ -6,18 +6,19 @@ import java.awt.event.WindowEvent;
 
 import javax.swing.JFrame;
 
-import base.BaseInterFace;
+import base.BaseInterface;
 
-public abstract class BaseFrame extends JFrame implements BaseInterFace{
-
+public abstract class BaseFrame extends JFrame implements BaseInterface{
+	
 	private BaseFrame preFrame;
+
 	public BasePanel center;
 	public BasePanel top;
 	public BasePanel bottom;
 	public BasePanel left;
 	public BasePanel right;
-
-	public BaseFrame(String title, int w, int h, BaseFrame preFrame) {
+	
+	public BaseFrame setFrame(String title, int w, int h, BaseFrame preFrame){
 		super.setTitle(title);
 		super.setSize(w, h);
 		
@@ -30,7 +31,7 @@ public abstract class BaseFrame extends JFrame implements BaseInterFace{
 		right = new BasePanel();
 		
 		setComp();
-		setDisign();
+		setDegin();
 		setEvent();
 		
 		super.add(center, BorderLayout.CENTER);
@@ -51,20 +52,19 @@ public abstract class BaseFrame extends JFrame implements BaseInterFace{
 		super.setLocationRelativeTo(null);
 		super.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
 		super.setVisible(true);
+		
+		return this;
 	}
 	
 	private void close() {
 		// TODO Auto-generated method stub
-		if(preFrame == null) {
-			System.exit(1);
-		}
-		super.dispose();
+		if(preFrame == null)
+			System.exit(0);
 	}
 
-	public void refresh() {
+	public void reFresh() {
 		// TODO Auto-generated method stub
 		super.repaint();
 		super.validate();
 	}
-
 }

@@ -20,11 +20,12 @@ public class BasePanel extends JPanel{
 	public BasePanel right;
 
 	public BasePanel() {
+		// TODO Auto-generated constructor stub
 		super(new BorderLayout());
 		super.setBackground(Color.WHITE);
 	}
 	
-	public BasePanel addCild(){
+	public BasePanel addChild() {
 		center = new BasePanel();
 		top = new BasePanel();
 		bottom = new BasePanel();
@@ -40,7 +41,19 @@ public class BasePanel extends JPanel{
 		return this;
 	}
 
+	public BasePanel setTitle(String title, int size) {
+		// TODO Auto-generated method stub
+		Border line = BorderFactory.createLineBorder(Color.BLACK);
+		
+		TitledBorder tb = BorderFactory.createTitledBorder(line, title);
+		tb.setTitleFont(new Font("HY헤드라인M", Font.PLAIN, size));
+		
+		super.setBorder(tb);
+		return this;
+	}
+
 	public BasePanel setFlowLayoutLeft() {
+		// TODO Auto-generated method stub
 		super.setLayout(new FlowLayout(FlowLayout.LEFT));
 		return this;
 	}
@@ -51,19 +64,10 @@ public class BasePanel extends JPanel{
 		return this;
 	}
 
-	public BasePanel setTitle(String Title, int size) {
-		Border line = BorderFactory.createLineBorder(Color.BLACK);
-		
-		TitledBorder tb = BorderFactory.createTitledBorder(line, Title);
-		tb.setTitleFont(new Font("HY헤드라인M", Font.PLAIN, size));
-		
-		super.setBorder(tb);
-		
-		return this;
-	}
-
 	public BasePanel setGridLayout(int r, int c, int hg, int vg) {
+		// TODO Auto-generated method stub
 		super.setLayout(new GridLayout(r, c, hg, vg));
 		return this;
 	}
+
 }

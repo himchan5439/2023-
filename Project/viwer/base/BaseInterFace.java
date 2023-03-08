@@ -1,7 +1,7 @@
 package base;
 
-public interface BaseInterFace {
+public interface BaseInterface {
 	void setComp();
-	void setDisign();
+	void setDegin();
 	void setEvent();
 }

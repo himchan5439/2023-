@@ -15,37 +15,39 @@ public class BaseLabel extends JLabel{
 		super(text);
 	}
 	
-	public BaseLabel SetFontSize(int size) {
-		super.setFont(new Font("HY헤드라인M", Font.PLAIN, size));
-		return this;
-	}
 
 	public BaseLabel setTextCenter() {
+		// TODO Auto-generated method stub
 		super.setVerticalTextPosition(JLabel.CENTER);
 		super.setHorizontalTextPosition(JLabel.CENTER);
 		return this;
 	}
 
 
-	public Component setTextBottomCenter() {
-		// TODO Auto-generated method stub
-		super.setHorizontalTextPosition(JLabel.CENTER);
-		super.setVerticalTextPosition(JLabel.BOTTOM);
-		return this;
-	}
-	
-	public BaseLabel setFontWhlie() {
+	public BaseLabel setTextWhite() {
 		// TODO Auto-generated method stub
 		super.setForeground(Color.WHITE);
 		return this;
 	}
+
+	public BaseLabel setTextSize(int size) {
+		// TODO Auto-generated method stub
+		super.setFont(new Font("HY헤드라인M", Font.PLAIN, size));
+		return this;
+	}
 	
+	public BaseLabel setTextBottomCenter() {
+		// TODO Auto-generated method stub
+		super.setVerticalTextPosition(JLabel.BOTTOM);
+		super.setHorizontalTextPosition(JLabel.CENTER);
+		return this;
+	}
+
+
 	public BaseLabel setLine() {
 		// TODO Auto-generated method stub
 		Border line = BorderFactory.createLineBorder(Color.BLACK);
-		
 		super.setBorder(line);
-		
 		return this;
 	}
 
